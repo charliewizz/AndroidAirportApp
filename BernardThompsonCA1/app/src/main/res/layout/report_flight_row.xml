@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/buttonWhiteText">
+
+
+    <TextView
+        android:text="Time_Destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bk_time_des"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="33dp" />
+
+    <TextView
+        android:text="Booking Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/bk_name"
+        android:layout_below="@+id/bk_time_des"
+        android:layout_alignLeft="@+id/bk_time_des"
+        android:layout_alignStart="@+id/bk_time_des" />
+
+    <TextView
+        android:text="Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bk_price"
+        android:layout_below="@+id/bk_name"
+        android:layout_alignLeft="@+id/bk_name"
+        android:layout_alignStart="@+id/bk_name"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:text="Passengers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bk_pax"
+        android:layout_alignBaseline="@+id/bk_time_des"
+        android:layout_alignBottom="@+id/bk_time_des"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp" />
+</RelativeLayout>

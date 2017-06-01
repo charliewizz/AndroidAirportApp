@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Waterford Airport</string>
+
+    <!-- MainActivity Buttons -->
+    <string name="b_information">Information</string>
+    <string name="b_book_flights">Book Flights</string>
+    <string name="b_departures">Departures</string>
+    <string name="b_arrivals">Arrivals</string>
+    <!-- Title Values for each activity -->
+    <string name="title_activity_book_flights">BookFlights</string>
+    <string name="title_activity_arrivals">Arrivals</string>
+    <string name="title_activity_departures">Departures</string>
+    <string name="title_activity_information">Information</string>
+
+    <string name="arrivals_menu">Arrivals</string>
+    <string name="departures_menu">Departures</string>
+    <string name="information_menu">Information</string>
+    <string name="book_flights_title">Welcome Book your flights now</string>
+    <string name="select_dest_title">Select Destination and Time</string>
+    <string name="booking_name">Booking Name</string>
+    <string name="select_price">Select Price</string>
+    <string name="brimingham_time_15_15">15.15</string>
+    <string name="birmingham">Birmingham</string>
+    <string name="manchester_time_11_30">11.30</string>
+    <string name="manchester">Manchester</string>
+    <string name="london_t2_19_00">19:00</string>
+    <string name="london_t1_07_30">07.30</string>
+    <string name="london_ltn">London - LTN</string>
+    <string name="business_150">Business - €150</string>
+    <string name="flex_110">Flex - € 110</string>
+    <string name="eco_70">Eco - €70</string>
+    <string name="number_of_passengers">Number of Passengers</string>
+    <string name="b_book_now">Book Now</string>
+    <string name="total_price">Total Price =</string>
+    <string name="lon">London 07.30</string>
+    <string name="my_flights_menu">My Flights</string>
+</resources>

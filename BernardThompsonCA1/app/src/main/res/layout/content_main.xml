@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/buttonWhiteText"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="thompson.bernard.bernardthompsonca1.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:text="@string/b_arrivals"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/bArrivals"
+        android:backgroundTint="#43a047"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/buttonWhiteText"
+        android:onClick="gotoArrivals"/>
+
+    <Button
+        android:text="@string/b_departures"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bArrivals"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/bDepartures"
+        android:backgroundTint="#ff5722"
+        android:textColor="@color/buttonWhiteText"
+        android:onClick="gotoDepartures"/>
+
+    <Button
+        android:text="@string/b_book_flights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bBookFlights"
+        android:backgroundTint="#0d47a1"
+        android:textColor="@color/buttonWhiteText"
+        android:layout_above="@+id/bArrivals"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="gotoBookFlights"/>
+
+    <Button
+        android:text="@string/b_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bInfomation"
+        android:layout_below="@+id/bDepartures"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#0d47a1"
+        android:textColor="@color/buttonWhiteText"
+        android:onClick="gotoInformation"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        app:srcCompat="@drawable/wat_logo"
+        android:id="@+id/wat_logo_image" />
+
+</RelativeLayout>

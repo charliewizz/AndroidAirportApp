@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="thompson.bernard.bernardthompsonca1.MainActivity">
+
+    <item
+        android:id="@+id/action_book_flights"
+        android:orderInCategory="100"
+        android:title="@string/my_flights_menu"
+        />
+
+
+</menu>

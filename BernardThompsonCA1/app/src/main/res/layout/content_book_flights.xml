@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_book_flights"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="thompson.bernard.bernardthompsonca1.BookFlights"
+    tools:showIn="@layout/activity_book_flights">
+
+    <TextView
+        android:text="@string/book_flights_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvBookFlightsTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="@string/select_dest_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:id="@+id/tvSelectTime"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/tvBookFlightsTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <include
+        android:id="@+id/tool_bar_bottom"
+        layout="@layout/bottom_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rg_dest_times"
+        android:layout_below="@+id/tvSelectTime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="@string/london_ltn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_des_london"
+            android:layout_weight="1"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <RadioButton
+            android:text="@string/london_t1_07_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rd_london_t1"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="timesToast"
+            />
+
+        <RadioButton
+            android:text="@string/london_t2_19_00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rd_london_t2"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="timesToast"
+            />
+
+        <TextView
+            android:text="@string/manchester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_manchester_dest"
+            android:layout_weight="1"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <RadioButton
+            android:text="@string/manchester_time_11_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rd_manchester_t"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="timesToast"
+            />
+
+        <TextView
+            android:text="@string/birmingham"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_birmingham_dest"
+            android:layout_weight="1"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <RadioButton
+            android:text="@string/brimingham_time_15_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rd_birmingham_t"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="timesToast"
+            />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_above="@+id/b_book_now"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/ed_booked_name"
+        android:textColor="?attr/colorPrimaryDark"
+        android:hint="@string/booking_name" />
+
+    <Button
+        android:text="@string/b_book_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:id="@+id/b_book_now"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="@color/buttonWhiteText"
+        android:layout_above="@+id/tool_bar_bottom"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="bookNowPressed"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_totalPrice"
+        android:textSize="24sp"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_alignBaseline="@+id/b_book_now"
+        android:layout_alignBottom="@+id/b_book_now"
+        android:layout_toRightOf="@+id/tv_total_price_title"
+        android:layout_toEndOf="@+id/tv_total_price_title" />
+
+    <TextView
+        android:text="@string/total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_total_price_title"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="24sp"
+        android:layout_alignBaseline="@+id/tv_totalPrice"
+        android:layout_alignBottom="@+id/tv_totalPrice"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/ed_no_pax"
+        android:hint="@string/number_of_passengers"
+        android:textColor="?attr/colorPrimaryDark"
+        android:layout_above="@+id/ed_booked_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Select Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvSelectTime"
+        android:layout_alignLeft="@+id/pricePicker"
+        android:layout_alignStart="@+id/pricePicker"
+        android:id="@+id/tvSelectPrice"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pricePicker"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/tvSelectPrice"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@android:color/darker_gray" />
+
+    <TextView
+        android:text="Business - €170"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvBusiness"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/tvFlex"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Economy - €70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvEco"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/tvPriceGuide"
+        android:layout_alignLeft="@+id/tvBusiness"
+        android:layout_alignStart="@+id/tvBusiness" />
+
+    <TextView
+        android:text="Flex - €120"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvFlex"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/tvEco"
+        android:layout_alignLeft="@+id/tvBusiness"
+        android:layout_alignStart="@+id/tvBusiness" />
+
+    <TextView
+        android:text="Price Guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvPriceGuide"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignTop="@+id/ed_no_pax"
+        android:layout_alignRight="@+id/tvFlex"
+        android:layout_alignEnd="@+id/tvFlex" />
+
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tool_bar_bottom"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/ib_book_flights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_book_flights"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"/>
+        <ImageButton
+            android:id="@+id/ib_arrivals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_arrivals"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/ib_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_home"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:id="@+id/ib_departures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_departures"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@color/colorPrimaryDark"/>
+        <ImageButton
+            android:id="@+id/ib_infomation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/icon_information"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>
